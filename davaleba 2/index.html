@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Form</title>
+    <style>
+        fieldset {
+            width: 18%;
+        }
+        textarea {
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Job Application Form</h1>
+    <form action="multipart/form-data" method="post">
+        <fieldset>
+            <legend>Personal Details</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br>
+
+        </fieldset>
+        <fieldset>
+            <legend>Job Details</legend>
+            <label for="position">Position Applied For:</label>
+
+            <select name="position" id="position" required>
+                <option value="f_dev"> Frontend Dev</option>
+                <option value="b_dev">Backend Dev</option>
+                <option value="full_stack">Full Stack Dev</option>
+            </select>
+            
+            <br>
+            <label for="experience">Experience level:</label>
+            <input type="radio" id="junior" name="experience" value="junior"> 
+            <label for="junior">Junior</label>
+
+            <input type="radio" id="mid" name="experience" value="mid"> 
+            <label for="mid">Mid</label>    
+
+            <input type="radio" id="senior" name="experience" value="senior"> 
+            <label for="senior">Senior</label>
+
+            <br>
+        </fieldset>
+        <fieldset>
+            <legend>Skills</legend>
+            <input type="checkbox" id="html" name="skills" value="html">
+            <label for="html">HTML</label>
+
+            <input type="checkbox" id="css" name="skills" value="css">
+            <label for="css">CSS</label>
+
+            <input type="checkbox" id="js" name="skills" value="js">
+            <label for="js">JS</label>
+
+            <input type="checkbox" id="python" name="skills" value="python">
+            <label for="python">Python</label>
+
+            <input type="checkbox" id="react" name="skills" value="react">
+            <label for="react">React</label>
+            
+            <br>
+        </fieldset>
+        <fieldset>
+            <legend>Resume</legend>
+            <label for="resume">Upload your resume:</label>
+            <input type="file" id="resume" name="resume" accept=".pdf" required>
+            <br>
+            <br>
+            <label for="textarea">Cover Letter:</label><br>
+            <textarea id="textarea" name="textarea" rows="4" cols="30" placeholder="Additional Information"></textarea>
+        </fieldset>
+        <br>
+        <input type="submit" value="Send Application">
+    </form>
+</body>
+</html>
